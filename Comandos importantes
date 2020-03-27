@@ -1,0 +1,27 @@
+Inicia o servidor 
+npm start
+
+Atualiza o servidor sempre que salva
+npm install nodemon -D
+
+Instalar query Builder 
+npm install knex
+
+Instala as dependencias do banco de dados
+npm install sqlite3
+
+Cria o arquivo Knexfile para configuração do banco de dados
+npx knex init
+
+Criar a migration
+knex migrate:make migration_name 
+
+Executar uma migration
+npx knex migrate:latest
+
+Desfaz a ultima migration executada
+npx knex migrate:rollback
+
+modulo de segurança - Determina quem vai poder acessar a nossa aplicação
+npm install cors
+
