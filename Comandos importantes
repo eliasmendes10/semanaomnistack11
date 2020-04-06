@@ -25,3 +25,5 @@ npx knex migrate:rollback
 modulo de segurança - Determina quem vai poder acessar a nossa aplicação
 npm install cors
 
+Replace em todas ocorrencias do texto
+control + D
