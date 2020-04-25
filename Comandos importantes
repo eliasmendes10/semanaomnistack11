@@ -1,3 +1,8 @@
+
+
+##################################################################
+React JS
+##################################################################
 Inicia o servidor 
 npm start
 
@@ -27,3 +32,16 @@ npm install cors
 
 Replace em todas ocorrencias do texto
 control + D
+
+##################################################################
+React Native
+##################################################################
+Comando de instala a ferramenta de testes Expo (-g significa instalação global)
+sudo npm install -g expo-cli
+
+ajuda
+expo -h
+
+Cria o esqueleto do projeto React Native
+expo init mobile
+
