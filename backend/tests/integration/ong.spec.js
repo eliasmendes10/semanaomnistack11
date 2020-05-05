@@ -1,0 +1,25 @@
+const request = require("supertest");
+const app = require("../../src/app");
+const connction = require("../../src/database/connection");
+
+describe("ONG", () => {
+  beforeEach(async () => {
+    await connction.migrate.latest();
+  });
+
+  afterAll(async () => {
+    await connction.destroy();
+  });
+
+  it("should be able to create a new ONG", async () => {
+    const response = await request(app).post("/ongs").send({
+      name: "APAE",
+      email: "contato@apae.com.br",
+      whatsapp: "48996412660",
+      city: "Tubarão",
+      uf: "SC",
+    });
+    expect(response.body).toHaveProperty("id");
+    expect(response.body.id).toHaveLength(8);
+  });
+});
