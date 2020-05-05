@@ -1,10 +1,11 @@
 const request = require("supertest");
 const app = require("../../src/app");
-const connction = require("../../src/database/connection");
+const connection = require("../../src/database/connection");
 
 describe("ONG", () => {
   beforeEach(async () => {
-    await connction.migrate.latest();
+    await connection.migrate.rollback();
+    await connection.migrate.latest();
   });
 
   afterAll(async () => {
